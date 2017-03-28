@@ -2,10 +2,25 @@
 <title>Hi please provide the info </title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <body>
+
+       <h3>Enter info</h3>
+       Enter the following info <br />
       <form action = "http://dd-poc.herokuapp.com/process_get" method = "GET">
          First Name: <input type = "text" name = "first_name">  <br>
          Last Name: <input type = "text" name = "last_name">
          <input type = "submit" value = "Submit">
+      </form>
+
+      <br />
+      <br />
+      <br />
+       
+       <h3>File Upload:</h3>
+       Select a file to upload: <br />
+      <form action = "http://dd-poc.herokuapp.com/file_upload" method = "POST" 
+         enctype = "multipart/form-data">
+         <input type="file" name="file" size="50" /><br />
+         <input type = "submit" value = "Upload File" />
       </form>
       
    </body>
