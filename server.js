@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 
 //Mount body-parser to parse URL encoded data and json data
+var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
