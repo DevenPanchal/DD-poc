@@ -8,7 +8,12 @@ app.use(bodyParser.json())
 
 // Mount cookie parser
 var cookieParser = require('cookie-parser');
-app.use(cookieParser())
+app.use(cookieParser());
+
+
+//Mount the multer to parse multipart/form-data
+var mult = multer(); 
+app.use(mult.array()); // for parsing multipart/form-data
 
 app.set('port', (process.env.PORT || 8081));
 
