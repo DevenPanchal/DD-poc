@@ -12,6 +12,7 @@ app.use(cookieParser());
 
 
 //Mount the multer to parse multipart/form-data
+var multer = require('multer');
 var mult = multer(); 
 app.use(mult.array()); // for parsing multipart/form-data
 
