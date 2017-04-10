@@ -30,7 +30,7 @@ app.use(function(req, res, next){
 app.use(function (err, req, res, next) {
   console.error(err.stack)
   res.status(500).send('This is the App-level error handling middleware. Something broke!')
-})
+});
 
 var server = app.listen(app.get('port'), function () {
 
