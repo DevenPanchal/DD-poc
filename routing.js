@@ -2,44 +2,43 @@ var express = require('express');
 var router = express.Router();
 
 
-// This responds with "Hello World" on the homepage
+// Handle "Hello World" on the homepage
 router.get('/', function (req, res) {
    console.log("Got a GET request for the homepage");
-   res.send('Hello GET');
+   res.sendFile( __dirname + "/" + "options.htm" );
 })
 
-// This responds a POST request for the homepage
+// Handle POST request for the homepage
 router.post('/', function (req, res) {
    console.log("Got a POST request for the homepage");
-   res.send('Hello POST');
+   res.send('Hello POST not available here');
 })
 
-// This responds a DELETE request for the /del_user page.
-router.delete('/del_user', function (req, res) {
-   console.log("Got a DELETE request for /del_user");
-   res.send('Hello DELETE');
-})
 
-// This responds a GET request for the /list_user page.
-router.get('/list_user', function (req, res) {
-   console.log("Got a GET request for /list_user");
+// Handle GET request for the /list_user page.
+router.get('/list_users', function (req, res) {
+   console.log("Got a GET request for /list_users");
    res.send('Page Listing');
 })
 
-// This responds a GET request for abcd, abxcd, ab123cd, and so on
-router.get('/ab*cd', function(req, res) {   
-   console.log("Got a GET request for /ab*cd");
-   res.send('Page Pattern Match');
+
+// Handle DELETE request for the /del_user page.
+router.delete('/delete_user', function (req, res) {
+   console.log("Got a DELETE request for /delete_user");
+   res.send('Hello DELETE');
 })
 
-//Send static file index.htm when queries for it specifically
+
+//Send static files when queried
+
 router.use(express.static('public'));
 
 router.get('/index.htm', function (req, res) {
    res.sendFile( __dirname + "/" + "index.htm" );
 })
 
-///Handle form input
+
+//Handle form input
 router.get('/process_get', function (req, res) {
    // Prepare output in JSON format
    response = {
@@ -72,5 +71,15 @@ router.post('/file_upload', function (req, res) {
       });
    });
 })
+
+//Dynamic url no regex
+router.get('/:req.query.first_name:req.query.last_name', function(req,res){
+res.send ('Hi '+ req.query.first_name + ' ' + 'req.query.last_name.'+ ' This is your page'  )})
+
+
+//Handle invalid urls
+router.get('*', function(req,res){
+res.send ('Invalid URL for DD');
+});
 
 module.exports = router;
