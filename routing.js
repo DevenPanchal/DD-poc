@@ -5,7 +5,7 @@ var router = express.Router();
 // Handle "Hello World" on the homepage
 router.get('/', function (req, res) {
    console.log("Got a GET request for the homepage");
-   res.sendFile( __dirname + "/" + "options.htm" );
+   res.sendFile( __dirname + "/" + "index.htm.htm" );
 })
 
 // Handle POST request for the homepage
@@ -33,8 +33,8 @@ router.delete('/delete_user', function (req, res) {
 
 router.use(express.static('public'));
 
-router.get('/index.htm', function (req, res) {
-   res.sendFile( __dirname + "/" + "index.htm" );
+router.get('/options.htm', function (req, res) {
+   res.sendFile( __dirname + "/" + "options.htm" );
 })
 
 
