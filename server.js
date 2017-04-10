@@ -14,11 +14,6 @@ app.set('port', (process.env.PORT || 8081));
 
 app.set('view engine', 'ejs');
 
-// Require router module
-var myrouter = require('./routing.js');
-
-// Requests on / handles by the routing router
-app.use('/', myrouter);
 
 // request date logger middleware
 app.use(function(req, res, next){
@@ -32,6 +27,13 @@ app.use(function (err, req, res, next) {
   console.error(err.stack)
   res.status(500).send('This is the App-level error handling middleware. Something broke!')
 });
+
+// Require router module
+var myrouter = require('./routing.js');
+
+// Requests on / handles by the routing router
+app.use('/', myrouter);
+
 
 var server = app.listen(app.get('port'), function () {
 
