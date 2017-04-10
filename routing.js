@@ -5,7 +5,7 @@ var router = express.Router();
 // Handle "Hello World" on the homepage
 router.get('/', function (req, res) {
    console.log("Got a GET request for the homepage");
-   res.sendFile( __dirname + "/" + "index.htm.htm" );
+   res.sendFile( __dirname + "/" + "index.htm" );
 })
 
 // Handle POST request for the homepage
