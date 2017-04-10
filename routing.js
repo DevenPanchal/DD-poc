@@ -74,12 +74,12 @@ router.post('/file_upload', function (req, res) {
 
 //Dynamic url no regex
 router.get('/:req.query.first_name:req.query.last_name', function(req,res){
-res.send ('Hi '+ req.query.first_name + ' ' + 'req.query.last_name.'+ ' This is your page'  )})
+res.send ('Hi '+ req.query.first_name + ' ' + 'req.query.last_name.'+ ' This is your page');})
 
 
 //Handle invalid urls
 router.get('*', function(req,res){
 res.send ('Invalid URL for DD');
-});
+})
 
 module.exports = router;
