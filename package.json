@@ -11,7 +11,11 @@
     "multer": "^1.3.0",
     "pug": "^2.0.0-beta11"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "mocha": "^4.0.1",
+    "should": "^13.1.3",
+    "supertest": "^3.0.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
