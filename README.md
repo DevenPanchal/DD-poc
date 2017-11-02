@@ -1,7 +1,7 @@
 # DD-poc
 ----------
 
-### Installations:
+### Installations
 ----------
 You will need nodejs (> v8) and npm (> v5) installed on your machine.
 
@@ -80,3 +80,6 @@ heroku open
 ```
 
 #### My heroku deployment is at https://dd-poc.herokuapp.com/. This is autobuilt and in sync with the latest code. (Not waiting for CI passes.)
+
+### CI/CD infrastructure (internal)
+----------
