@@ -34,7 +34,7 @@ mocha
 ----------
 For this you will need docker installed. Refer to https://docs.docker.com/engine/installation/ for instructions.
 This repository contains a Dockerfile that can be used to build a docker image.
-If you want to try out with a prebuilt latest stable image (Not waiting for CI passes), follow instructions below:
+If you want to try out with a prebuilt latest stable image (This is autobuilt and in sync with the latest code. Not waiting for CI passes), follow instructions below:
 ```
 git pull devendocker/dd-poc:latest
 docker run -it -p 8010:8081 devendocker/dd-poc:latest
