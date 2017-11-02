@@ -83,7 +83,7 @@ heroku ps:scale web=1
 heroku open
 ```
 
-#### My heroku deployment is at https://dd-poc.herokuapp.com/. This is autobuilt with the latest code. (Not waiting for Jenkins CI passes.)
+#### Here is my app on heroku:  https://dd-poc.herokuapp.com/. This is autobuilt with the latest code. (Not waiting for Jenkins CI passes.)
 
 
 ### CI/CD infrastructure (internal)
