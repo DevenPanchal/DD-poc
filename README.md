@@ -7,6 +7,7 @@ You will need nodejs (> v8) and npm (> v5) installed on your machine.
 
 If you don't want to do this and want a containerized application, skip this and jump to Run in a docker container instructions. The docker container comes with the correct versions of node and npm installed.
 
+
 ### Run on your machine
 ----------
 To run locally -
@@ -32,6 +33,7 @@ or
 mocha
 ```
 
+
 ### Run in a docker container
 ----------
 For this you will need docker installed. Refer to https://docs.docker.com/engine/installation/ for instructions.
@@ -55,6 +57,7 @@ If you want to attach to the already running container:
 ```
 docker attach <CONTAINER_NAME>
 ```
+
 
 ### Run on Heroku ( a cloud Application Platform)
 ----------
@@ -80,6 +83,7 @@ heroku open
 ```
 
 #### My heroku deployment is at https://dd-poc.herokuapp.com/. This is autobuilt and in sync with the latest code. (Not waiting for CI passes.)
+
 
 ### CI/CD infrastructure (internal)
 ----------
