@@ -9,7 +9,7 @@ You will need nodejs (> v8) and npm (> v5) installed on your machine.
 If you don't want to do this and want a containerized application, skip this and jump to Run in a docker container instructions. The docker container comes with the correct versions of node and npm installed.
 
 
-### Run on your machine
+### Run on a local machine
 ----------
 To run locally -
 ```
@@ -21,7 +21,7 @@ node server.js
 ``` 
 
 
-### Test on your machine
+### Test on a local machine
 ----------
 We use the Mocha test framework for Javascript
 First run the server using the above instructions. 
