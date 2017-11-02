@@ -88,3 +88,6 @@ heroku open
 
 ### CI/CD infrastructure (internal)
 ----------
+Jenkins
+Heroku
+Docker
